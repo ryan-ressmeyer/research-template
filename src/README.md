@@ -1,0 +1,1 @@
+Source folder containing all computationally intensive and utility code. The goal is for the notebooks to be explanatory tools, while the src directory contains the nitty gritty of analysis.

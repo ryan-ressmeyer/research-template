@@ -1,0 +1,1 @@
+Folder containing all results from the notebook. These should be figures as well as intermediate data output and santiy-check figures.

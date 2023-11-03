@@ -1,0 +1,9 @@
+*.png
+*.pkl
+*.pt
+*.h5
+data/**
+*.egg*
+**/__pycache__
+results/**
+!README.md
