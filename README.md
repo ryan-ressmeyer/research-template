@@ -1,4 +1,4 @@
-This project of this project is based off the principles outlined by Patrick Minault in [The Good Research Code Handbook](https://goodresearch.dev)
+This project template is inspired by the principles outlined by Patrick Minault in [The Good Research Code Handbook](https://goodresearch.dev)
 
 ### First time setup:
 
