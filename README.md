@@ -51,5 +51,23 @@ This declarative workflow guarantees that your environment is always in sync wit
 
 ### 🔄 Additional Notes
 
-- **Updating dependencies:** If you want to update all packages to their latest versions, run `uv update` followed by `uv sync`.
+- **Activating the environment:** If you prefer to activate the environment to work in an interactive shell (like with conda), run `source .venv/bin/activate` on macOS/Linux or `.venv\Scripts\activate` on Windows.
+
+- **Updating packages:** To update all packages to the latest allowed versions, run `uv lock --refresh` then `uv sync`. To upgrade a single package, run `uv pip install --upgrade <package-name>`.
+
+- **Adding a GitHub repo as a dependency:** You can add a repository directly in your `pyproject.toml`:
+    ```toml
+    # pyproject.toml
+    dependencies = [
+        # Public repo
+        "sphinx @ git+https://github.com/sphinx-doc/sphinx#egg=sphinx",
+        # Private repo (requires SSH keys with GitHub)
+        "my_pkg_name @ git+ssh://git@github.com/my-github-name/my_repo.git"
+    ]
+    ```
+    To update a Git dependency to the latest commit, run `uv pip install --upgrade <package-name>`.
+
+- **Editable installs for local development:** To work on a local package in development mode, you can install it as editable by adding it to your dependencies with the `-e` flag or by using `uv pip install -e .` in the package directory.
+
+
 
