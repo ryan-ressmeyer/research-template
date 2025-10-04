@@ -1,9 +1,24 @@
-*.png
-*.pkl
-*.pt
-*.h5
-data/**
-*.egg*
+# IDE and editor folders
+.vscode/
+.idea/
+
+# Python cache
 **/__pycache__
+
+# Virtual environment created by uv
+.venv/
+
+# Data and results folders
+data/**
 results/**
 !README.md
+
+# Jupyter notebooks cache
+.ipynb_checkpoints/
+
+# Other common files to ignore
+*.pkl
+*.h5
+*.png
+*.pt
+*.egg*

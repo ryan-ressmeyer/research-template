@@ -1,5 +1,5 @@
-Folder to hold the raw data from experiments. 
+# data/
 
-Often I break this up into /raw and /intermediate. 
+Raw and processed datasets for your research project. This folder is excluded from version control by default.
 
-Optional extension is to include code to pull data from online repository into this folder.
+**Note:** Large datasets should be stored elsewhere (cloud storage, data repositories) and downloaded programmatically.

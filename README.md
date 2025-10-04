@@ -1,17 +1,55 @@
-This project template is inspired by the principles outlined by Patrick Minault in [The Good Research Code Handbook](https://goodresearch.dev)
+# Research Project Template (with uv)
 
-### First time setup:
+This project template is inspired by the principles outlined by Patrick Minault in [The Good Research Code Handbook](https://goodresearch.dev) and uses the `uv` tool for a fast, modern, and reproducible Python workflow.
 
-Make a new conda environment from .yaml: `conda env create --name "recoveredenv" --file environment.yml`
+### First-Time Setup
 
-Install the src package locally: `pip install -e . `
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd <your-repo>
+    ```
 
-Pull submodules: `git submodule update --init --recursive`
+2.  **Install `uv`:**
+    Follow the instructions at [astral.sh/uv/install](https://docs.astral.sh/uv/getting-started/installation).
 
-### Other Notes:
+3.  **Create the virtual environment:**
+    ```bash
+    uv venv
+    ```
 
-Saving environment.yaml: `conda env export > environment.yml`
+4.  **Sync the environment:**
+    This installs all the dependencies listed in `pyproject.toml` based on the versions in `uv.lock`.
+    ```bash
+    uv sync
+    ```
 
-To update the environment.yaml: `conda env update --prefix ./env --file environment.yml --prune`
+You're all set! Your environment is now perfectly replicated.
 
-To pull most recent version of submodules: `git submodule update --recursive --remote`
+---
+
+### The Daily Workflow
+
+The iterative cycle of research becomes simple and robust.
+
+1.  **Need a new package?** Add its name (e.g., `"seaborn"`) to the `dependencies` list in `pyproject.toml`.
+
+2.  **Update your environment:** Run `uv sync`. This will update your `uv.lock` file and install the new package.
+
+3.  **Run your code:** Execute scripts using `uv run`. This ensures your code runs inside the project's virtual environment.
+    ```bash
+    uv run python src/my_script.py
+    ```
+
+4.  **Work in Jupyter?** Add `ipykernel` to your `pyproject.toml`, run `uv sync`, and then install the kernel:
+    ```bash
+    uv run ipython kernel install --user --name="my-research-project"
+    ```
+    You can now select the "my-research-project" kernel in Jupyter.
+
+This declarative workflow guarantees that your environment is always in sync with your `pyproject.toml` and `uv.lock` files, eliminating environment drift and ensuring reproducibility.
+
+### 🔄 Additional Notes
+
+- **Updating dependencies:** If you want to update all packages to their latest versions, run `uv update` followed by `uv sync`.
+

@@ -1,3 +1,8 @@
-Folder containing notebooks that do the analysis for this repository. 
+# notebooks/
 
-This is the main stop for the project and should generate all results.
+Jupyter notebooks for exploratory data analysis, experiments, and documentation of your research process.
+
+Run notebooks with the project kernel:
+```bash
+uv run ipython kernel install --user --name="my-research-project"
+```

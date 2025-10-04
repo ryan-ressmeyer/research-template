@@ -1,1 +1,5 @@
-Source folder containing all computationally intensive and utility code. The goal is for the notebooks to be explanatory tools, while the src directory contains the nitty gritty of analysis.
+# src/
+
+Source code for your research project. Contains reusable modules, utility functions, and core analysis code that can be imported into notebooks or scripts.
+
+Install this package in development mode with: `uv sync`
