@@ -43,7 +43,7 @@ The iterative cycle of research becomes simple and robust.
 
 4.  **Work in Jupyter?** Add `ipykernel` to your `pyproject.toml`, run `uv sync`, and then install the kernel:
     ```bash
-    uv run ipython kernel install --user --name="my-research-project"
+    uv run ipython kernel install --user --env VIRTUAL_ENV $(pwd)/.venv --name="my-research-project""
     ```
     You can now select the "my-research-project" kernel in Jupyter.
 
