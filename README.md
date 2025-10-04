@@ -49,7 +49,9 @@ The iterative cycle of research becomes simple and robust.
 
 This declarative workflow guarantees that your environment is always in sync with your `pyproject.toml` and `uv.lock` files, eliminating environment drift and ensuring reproducibility.
 
-### 🔄 Additional Notes
+---
+
+### Additional Notes
 
 - **Activating the environment:** If you prefer to activate the environment to work in an interactive shell (like with conda), run `source .venv/bin/activate` on macOS/Linux or `.venv\Scripts\activate` on Windows.
 
