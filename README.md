@@ -30,7 +30,7 @@ You're all set! Your environment is now perfectly replicated.
 
 ### The Daily Workflow
 
-The iterative cycle of research becomes simple and robust.
+Environment management becomes simple and robust.
 
 1.  **Need a new package?** Add its name (e.g., `"seaborn"`) to the `dependencies` list in `pyproject.toml`.
 
@@ -69,7 +69,7 @@ This declarative workflow guarantees that your environment is always in sync wit
     ```
     To update a Git dependency to the latest commit, run `uv pip install --upgrade <package-name>`.
 
-- **Editable installs for local development:** To work on a local package in development mode, you can install it as editable by adding it to your dependencies with the `-e` flag or by using `uv pip install -e .` in the package directory.
+- **Editable installs for local development:** To work on a local package in development mode, you can install it as editable by using `uv pip install -e .` in the package directory. Note that this is imperitive and will be overwritten by `uv sync`, so it is not recommended.
 
 
 
