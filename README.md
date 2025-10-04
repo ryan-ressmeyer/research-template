@@ -53,7 +53,7 @@ This declarative workflow guarantees that your environment is always in sync wit
 
 - **Activating the environment:** If you prefer to activate the environment to work in an interactive shell (like with conda), run `source .venv/bin/activate` on macOS/Linux or `.venv\Scripts\activate` on Windows.
 
-- **Updating packages:** To update all packages to the latest allowed versions, run `uv lock --refresh` then `uv sync`. To upgrade a single package, run `uv pip install --upgrade <package-name>`.
+- **Updating packages:** To update all packages to the latest allowed versions, run `uv lock --upgrade` then `uv sync`. To upgrade a single package, run `uv pip install --upgrade <package-name>`.
 
 - **Adding a GitHub repo as a dependency:** You can add a repository directly in your `pyproject.toml`:
     ```toml
